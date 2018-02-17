@@ -322,11 +322,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d8a0cf9cef293b448b3dd42cf350a7c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d8a0cf9cef293b448b3dd42cf350a7c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d8a0cf9cef293b448b3dd42cf350a7c, type: 3}
       propertyPath: m_LocalScale.z
@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 1283378781}
   - component: {fileID: 1283378780}
   - component: {fileID: 1283378779}
+  - component: {fileID: 1283378784}
   - component: {fileID: 1283378778}
   - component: {fileID: 1283378777}
   - component: {fileID: 1283378783}
@@ -476,3 +477,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1283378784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1283378776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1a010922f96d842816590830f363c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 0
+  sensitivityX: 15
+  sensitivityY: 15
+  minimumX: -360
+  maximumX: 360
+  minimumY: -60
+  maximumY: 60

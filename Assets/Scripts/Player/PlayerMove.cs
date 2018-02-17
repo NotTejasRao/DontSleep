@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
- 
+
+/**
+ * http://wiki.unity3d.com/index.php/FPSWalkerEnhanced
+ **/
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour
 {
