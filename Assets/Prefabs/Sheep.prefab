@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4849408537178144}
   m_Layer: 0
-  m_Name: Armature_002
+  m_Name: SheepBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 33706048986100256}
   - component: {fileID: 23520887549040114}
   m_Layer: 0
-  m_Name: Icosphere_001
+  m_Name: SheepL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,8 @@ GameObject:
   - component: {fileID: 4407885012443652}
   - component: {fileID: 95293290869655410}
   - component: {fileID: 54638115863342712}
-  - component: {fileID: 64182305895580944}
+  - component: {fileID: 114595156077420242}
+  - component: {fileID: 114906823739654212}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Untagged
@@ -225,7 +226,7 @@ GameObject:
   - component: {fileID: 4309495394665150}
   - component: {fileID: 137457897163941850}
   m_Layer: 0
-  m_Name: Icosphere_000
+  m_Name: SheepLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 1619862793162868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 4849408537178144}
   - {fileID: 4309495394665150}
@@ -480,22 +481,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
---- !u!64 &64182305895580944
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1619862793162868}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
 --- !u!95 &95293290869655410
 Animator:
   serializedVersion: 3
@@ -513,6 +500,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114595156077420242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619862793162868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487592cfa7748004e8d590be09f5b67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114906823739654212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619862793162868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4274ee797c527274ca119aec868b3208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1643454947499144, guid: 34c3c322482671c4da1df5c1b09c636a, type: 2}
+  health: 0
 --- !u!137 &137362704939532998
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
