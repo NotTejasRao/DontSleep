@@ -9,7 +9,6 @@ public class DestroySplashScreen : MonoBehaviour
 
 	IEnumerator Start(){
 		yield return new WaitForSeconds (delaytime);
-		GameObject menu = GameObject.Find("Menu");
-		menu.transform.Translate (0, -108, 0);
+		GameObject menu = (GameObject) Instantiate(Resources.Load("Menu")) as GameObject;
 	}
 }
