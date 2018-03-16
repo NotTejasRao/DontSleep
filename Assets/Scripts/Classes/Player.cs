@@ -26,8 +26,13 @@ public class Player : MonoBehaviour
         }
         else if (collidedRigidbody != null && collidedRigidbody.name.StartsWith("Sheep"))
         {
-            gameLord.ReduceAwakenss(10);
+            gameLord.ReduceAwakenss(5);
             rigidbody.AddForce(transform.forward * 1000);
+        }
+        else if (collidedObject.name.StartsWith("Lollypop"))
+        {
+            gameLord.ReduceAwakenss(-10);
+            Destroy(collidedObject);
         }
     }
 

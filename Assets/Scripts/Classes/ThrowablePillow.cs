@@ -5,9 +5,13 @@ using UnityEngine;
 public class ThrowablePillow : MonoBehaviour {
 
     public GameLord gameLord;
+    public AudioSource audioSource;
+    public AudioClip pillowThrow;
+    public AudioClip pillowExplode;
 
     public void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         gameLord = GameObject.Find("GameLord").GetComponent<GameLord>();        
     }
 
@@ -15,6 +19,8 @@ public class ThrowablePillow : MonoBehaviour {
     {
         if (!collision.collider.transform.name.StartsWith("Player"))
         {
+            gameLord.PlayPillowExplode();
+
             Collider[] colliders = Physics.OverlapSphere(transform.position, 2);
             foreach (Collider col in colliders)
             {
@@ -26,6 +32,20 @@ public class ThrowablePillow : MonoBehaviour {
             }
             Destroy(gameObject);
         }   
+    }
+
+    public void PlayPillowThrow()
+    {
+        audioSource.clip = pillowThrow;
+        audioSource.volume = 1f;
+        audioSource.Play();
+    }
+
+    public void PlayPillowExplode()
+    {        
+        audioSource.clip = pillowExplode;
+        audioSource.volume = 1f;
+        audioSource.Play();
     }
 
 }

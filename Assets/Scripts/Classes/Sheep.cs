@@ -9,7 +9,12 @@ public class Sheep : MonoBehaviour {
     private DateTime lastHurtTimestamp;
     private Vector3 destination;
     private Rigidbody rigidbody;
-    private DateTime lastMovementTimestamp;
+    private AudioSource audioSource;
+    public AudioClip ba1;
+    public AudioClip ba2;
+    public AudioClip ba3;
+    public AudioClip ba4;
+    public AudioClip ba5;
 
     private void Awake()
     {
@@ -17,9 +22,11 @@ public class Sheep : MonoBehaviour {
     }
 
     private void Start()
-    {
-        lastMovementTimestamp = DateTime.Now;
+    {      
         rigidbody = gameObject.GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.enabled = true;
+        audioSource.volume = .1f;
         health = 10;
         lastHurtTimestamp = DateTime.Now;
         InvokeRepeating("MoveSheep", 0f, 0.1f);
@@ -32,11 +39,39 @@ public class Sheep : MonoBehaviour {
 
     private void MoveSheep()
     {
-
         Vector3 sheepPosition = transform.position;
         if (Vector3.Distance(player.transform.position, sheepPosition) < 10)
         {
             destination = player.transform.position;
+
+            if (UnityEngine.Random.Range(0,500) == 2)
+            {
+                Debug.Log("MUSIC");
+                AudioClip selected = null;
+                switch(UnityEngine.Random.Range(1,5))
+                {
+
+                    case 1:
+                        selected = ba1;
+                        break;
+
+                    case 2:
+                        selected = ba2;
+                        break;
+                    case 3:
+                        selected = ba3;
+                        break;
+                    case 4:
+                        selected = ba4;
+                        break;
+                    case 5:
+                        selected = ba5;
+                        break;
+                }
+                audioSource.clip = selected;
+                audioSource.Play();
+            }
+
         }
         if (destination == null || Vector3.Distance(destination, gameObject.transform.position) < 1)
         {
@@ -46,31 +81,8 @@ public class Sheep : MonoBehaviour {
             CancelInvoke("MoveSheep");
             InvokeRepeating("MoveSheep", 0.5f, 0.1f);
         }
-        rigidbody.velocity = (destination - sheepPosition).normalized * speed;
-        
-    }
-
-    public void Hurt(int hurtAmount)
-    { 
-        double milli = getTimeSince(lastHurtTimestamp);
-        Debug.Log("Tried hurt" + milli);
-        if (milli > 1*1000)
-        {
-            lastHurtTimestamp = DateTime.Now;
-            Debug.Log("Hurt");
-            health -= hurtAmount;
-            if (health <= 0) Kill();
-        }   
-    }
-
-    public void Kill()
-    {
-        Destroy(this.gameObject);
-    }
-
-    private double getTimeSince(DateTime lastTimestamp)
-    {
-        return DateTime.Now.Subtract(lastTimestamp).TotalMilliseconds;
+        destination.y = sheepPosition.y;
+        rigidbody.velocity = (destination - sheepPosition).normalized * speed;        
     }
 
 }

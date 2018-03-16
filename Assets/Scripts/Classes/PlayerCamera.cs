@@ -15,6 +15,7 @@ public class PlayerCamera : MonoBehaviour {
             {
                 GameObject bullet = Instantiate(pillow, transform.position + new Vector3(0, .5f, 0), transform.rotation) as GameObject;
                 bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 10;
+                bullet.GetComponent<ThrowablePillow>().PlayPillowThrow();
                 gameLord.pillows--;
             }
         }
