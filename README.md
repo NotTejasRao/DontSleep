@@ -1,6 +1,6 @@
 # DontSleep
 
-A Unity game which won the "Best in Show" award at CodeDay Seattle (Winter 2017).
+A Unity game which won the "Best in Show" award at CodeDay Seattle (Winter 2017.)
 
 Plot:
 -----------
