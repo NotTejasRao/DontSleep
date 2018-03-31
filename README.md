@@ -18,4 +18,4 @@ Justin (Sound)
 
 Technical:
 -----------
-Hi recruiters! Please try not to judge. We both know Hackathons only exist to teach everyone tape and glue programming. Oh, and free food.
+Hi recruiters! Please try not to judge. We both know Hackathons only exist to teach everyone tape-and-glue programming. Oh, and free food. FREE FOOD!?
