@@ -10,11 +10,13 @@ Credits:
 -----------
 Tejas (Code)
 
+Justin (Code/Sound)
+
 Andrew (Code)
 
 Imam (Graphics)
 
-Justin (Sound)
+
 
 Technical:
 -----------
