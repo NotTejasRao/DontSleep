@@ -8,13 +8,13 @@ Plot:
 
 Credits:
 -----------
-Tejas (Code)
+Tejas (Game Code)
 
-Justin (Code/Sound)
+Andrew (Title Screen Code)
 
-Andrew (Code)
+Justin (Sound)
 
-Imam (Graphics)
+Imam (Art)
 
 
 
