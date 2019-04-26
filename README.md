@@ -1,23 +1,21 @@
 # DontSleep
 
-A Unity game which won the "Best in Show" award at CodeDay Seattle (Winter 2017.)
+_A Unity game which won the "Best in Show" award at CodeDay Seattle (Winter 2017.)_
 
-Plot:
------------
-"Count sheeps till you fall asleep," they say? Well, you will destroy as many sheeps as you can to stay awake. Collect pillows to throw at the sheeps and candies to keep yourself awake. Each time a sheep hits you, you become sleepier. Good luck not falling asleep as the screen dims in proportion to your awakeness bar.
+"Count sheeps till you fall asleep," they said. Well, sleep is for the weak. You will throw pillows at all the sheeps that make you sleepy and eat all the candies that keep you awake. The screen dims in proportion to your sleepiness. Good luck.
 
-Credits:
------------
-Tejas (Game Code)
+## Credits
+- Tejas (Core Game Code)
 
-Andrew (Title Screen Code)
+- Andrew (Title Screen Code)
 
-Justin (Sound)
+- Justin (Sound)
 
-Imam (Art)
+- Imam (Art)
 
+## Contribute
+This is a hackathon game, so the code is slightly messey, but if you would like to contribute to or recreate this project, please submit a pull request or message me.
 
+## Licence
+GPL2
 
-Technical:
------------
-Hi recruiters! Please try not to judge. We both know Hackathons only exist to teach everyone tape-and-glue programming. Oh, and free food. FREE FOOD!?
