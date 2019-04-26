@@ -14,7 +14,7 @@ _The Unity game that won the "Best in Show" award at CodeDay Seattle (Winter 201
 - Imam (Art)
 
 ## Contribute
-This is a hackathon game, so the code is slightly messey, but if you would like to contribute to or recreate this project, please submit a pull request or message me.
+This is a hackathon game, so the code is slightly messey, but if you would like to contribute to or recreate this project -- please submit a pull request or message me.
 
 ## Licence
 GPL2
