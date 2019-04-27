@@ -1,4 +1,4 @@
-# DontSleep
+# Don't Sleep
 
 _The Unity game that won the "Best in Show" award at CodeDay Seattle (Winter 2017.)_
 
